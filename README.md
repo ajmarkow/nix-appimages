@@ -64,11 +64,14 @@ programs.appimages = {
 }
 ```
 
-Get the hash with:
+Get the hash without manual work:
 
 ```
-nix-prefetch-url --type sha256 <url>
+nix run github:you/nix-appimages#prefetch-appimage -- <url> [name]
 ```
+
+Prints a ready-to-paste `programs.appimages.apps` entry. Hash stays in
+config for purity; the helper does the prefetch for you.
 
 ## Options
 
