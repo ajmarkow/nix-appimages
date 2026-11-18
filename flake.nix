@@ -24,6 +24,10 @@
         type = "app";
         program = nixpkgs.lib.getExe self.packages.${system}.prefetch-appimage;
       };
+      add = {
+        type = "app";
+        program = nixpkgs.lib.getExe self.packages.${system}.prefetch-appimage;
+      };
     });
   };
 }
